@@ -1,0 +1,141 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* KBC Inspired Dark Theme - Vivid Purple, Electric Indigo, Soft Lavender (for text/highlights) */
+    /* Primary: Electric Indigo (#6F00FF) -> HSL(267, 100%, 50%) */
+    /* Secondary: Vivid Purple (#9400D3) -> HSL(282, 100%, 41%) */
+    /* Accent: Gold/Yellow for contrast */
+    /* Background: Deep Dark Purple/Indigo */
+    /* Foreground (Text): Soft Lavender inspired (very light, high contrast) */
+
+    --background: 270 50% 8%; /* Deep Dark Purple/Indigo */
+    --foreground: 240 40% 95%; /* Very Light Lavender/Off-White for text */
+    
+    --card: 270 50% 12%; /* Slightly Lighter Dark Purple/Indigo for cards */
+    --card-foreground: 240 40% 95%;
+    
+    --popover: 270 50% 10%; /* Darker for popovers */
+    --popover-foreground: 240 40% 95%;
+    
+    --primary: 267 100% 60%; /* Electric Indigo - Main interactive elements, slightly lighter for better vibrancy */
+    --primary-foreground: 240 60% 97%; /* Light text on Electric Indigo */
+    
+    --secondary: 282 100% 50%; /* Vivid Purple - Other accents, buttons, slightly lighter */
+    --secondary-foreground: 240 60% 97%; /* Light text on Vivid Purple */
+    
+    --muted: 270 30% 25%; /* Muted Purple for less emphasis */
+    --muted-foreground: 240 30% 70%; /* Lighter muted text */
+    
+    --accent: 45 100% 55%; /* Gold/Bright Yellow for highlights, rings, lifelines */
+    --accent-foreground: 270 50% 10%; /* Dark text on Gold */
+    
+    --destructive: 0 70% 55%; /* Bright Red for errors/incorrect answers */
+    --destructive-foreground: 0 0% 98%;
+    
+    --success: 120 60% 45%;  /* Green for correct answers */
+    --success-foreground: 0 0% 98%;
+    
+    --border: 270 40% 25%; /* Subtle Purple border */
+    --input: 270 40% 20%; /* Darker input background */
+    --ring: 45 100% 55%; /* Gold for focus rings */
+    
+    --radius: 0.75rem; /* Slightly larger radius for a modern feel */
+
+    /* Chart colors can remain generic or be themed if charts are used extensively */
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    
+    /* Sidebar specific (if used, can adopt main theme) */
+    --sidebar-background: 270 45% 6%; 
+    --sidebar-foreground: 240 35% 90%;
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: 270 40% 20%;
+    --sidebar-accent-foreground: 240 35% 90%;
+    --sidebar-border: 270 40% 22%;
+    --sidebar-ring: var(--ring);
+  }
+
+  .dark {
+    /* Ensure dark theme variables are the same as root for consistency */
+    --background: 270 50% 8%;
+    --foreground: 240 40% 95%;
+    --card: 270 50% 12%;
+    --card-foreground: 240 40% 95%;
+    --popover: 270 50% 10%;
+    --popover-foreground: 240 40% 95%;
+    --primary: 267 100% 60%;
+    --primary-foreground: 240 60% 97%;
+    --secondary: 282 100% 50%;
+    --secondary-foreground: 240 60% 97%;
+    --muted: 270 30% 25%;
+    --muted-foreground: 240 30% 70%;
+    --accent: 45 100% 55%;
+    --accent-foreground: 270 50% 10%;
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 98%;
+    --success: 120 60% 45%;
+    --success-foreground: 0 0% 98%;
+    --border: 270 40% 25%;
+    --input: 270 40% 20%;
+    --ring: 45 100% 55%;
+
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+
+    --sidebar-background: 270 45% 6%;
+    --sidebar-foreground: 240 35% 90%;
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: 270 40% 20%;
+    --sidebar-accent-foreground: 240 35% 90%;
+    --sidebar-border: 270 40% 22%;
+    --sidebar-ring: var(--ring);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    /* Consider a subtle gradient for depth if desired */
+    /* background-image: radial-gradient(circle at top center, hsl(var(--background)) 0%, hsl(var(--background-end, var(--background))) 100%); */
+  }
+}
+
+/* Custom Animation Delay Utilities */
+@layer utilities {
+  .animation-delay-0s {
+    animation-delay: 0s;
+  }
+  .animation-delay-150ms {
+    animation-delay: 0.15s;
+  }
+  .animation-delay-200ms { 
+    animation-delay: 0.2s;
+  }
+  .animation-delay-300ms {
+    animation-delay: 0.3s;
+  }
+  .animation-delay-400ms { 
+    animation-delay: 0.4s;
+  }
+  .animation-delay-450ms {
+    animation-delay: 0.45s;
+  }
+  .animation-delay-\[0\.6s\] { /* Added for 5th dot in loader */
+    animation-delay: 0.6s;
+  }
+}
