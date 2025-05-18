@@ -3,7 +3,7 @@
 
 import type { Question } from "@/lib/types";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { HelpCircle, TrendingUp } from "lucide-react"; // Using TrendingUp for difficulty
+import { HelpCircle, TrendingUp } from "lucide-react"; 
 
 interface QuestionDisplayProps {
   question: Question;
@@ -34,9 +34,9 @@ export function QuestionDisplay({ question, questionNumber, totalQuestions }: Qu
             Difficulty: <span className="font-semibold text-secondary ml-1">{question.difficulty}</span>
         </div>
       </CardHeader>
-      {/* Optional: Placeholder for image related to question */}
-      {/* {question.imageUrl && (
-        <CardContent className="p-4 flex justify-center">
+      
+      
+        {/*<CardContent className="p-4 flex justify-center">
           <img src={question.imageUrl} alt="Question related" className="max-h-64 rounded-lg shadow-md" />
         </CardContent>
       )} */}

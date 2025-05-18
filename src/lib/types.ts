@@ -26,17 +26,17 @@ export interface FirestoreScoreEntry {
   score: number;
   userId: string;
   timestamp: Timestamp; // Firestore Timestamp
-  timeTakenMs: number; // Time taken to complete the game in milliseconds
+  timeTakenMs: number; // Time taken to complete 
 }
 
-// Client-side representation of a score entry
+// representation of a score entry
 export interface ScoreEntry {
-  id: string; // This will be the userId (document ID from Firestore)
+  id: string; 
   name: string;
   score: number;
-  date: string; // Formatted date string for display
-  timestampMillis?: number; // Milliseconds since epoch, for client-side sorting if needed
-  timeTakenMs?: number; // Time taken to complete the game in milliseconds
+  date: string; 
+  timestampMillis?: number; 
+  timeTakenMs?: number; 
 }
 
 export const AudiencePollResultsSchema = z.record(z.number());

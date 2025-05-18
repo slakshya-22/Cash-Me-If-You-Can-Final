@@ -20,7 +20,7 @@ function PlayPageContent() {
       const redirectTo = `/play?mode=${mode}&category=${encodeURIComponent(category)}`;
       router.push(`/auth/signin?redirect=${encodeURIComponent(redirectTo)}`);
     }
-  }, [user, loading, router, mode, category, searchParams]); // Added searchParams to dependency array
+  }, [user, loading, router, mode, category, searchParams]); 
 
   if (loading || !user) {
     return (

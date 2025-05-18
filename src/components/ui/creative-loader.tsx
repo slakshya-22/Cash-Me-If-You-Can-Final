@@ -18,9 +18,9 @@ export function CreativeLoader({
 }: CreativeLoaderProps) {
   
   const dotSizeClasses = {
-    small: "w-2.5 h-2.5", // Increased slightly
-    medium: "w-3 h-3",    // Increased slightly
-    large: "w-4 h-4",     // Increased slightly
+    small: "w-2.5 h-2.5", 
+    medium: "w-3 h-3",    
+    large: "w-4 h-4",     
   };
 
   const containerHeightClass = { 

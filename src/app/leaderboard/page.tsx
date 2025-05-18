@@ -48,13 +48,7 @@ export default function LeaderboardPage() {
       console.log("[LeaderboardPage] Fetching scores from Firestore...");
       try {
         const scoresCollection = collection(firestore, "leaderboard_scores");
-        // IMPORTANT: This query requires a composite index in Firestore.
-        // Collection: leaderboard_scores
-        // Fields: 
-        // 1. score (Descending)
-        // 2. timeTakenMs (Ascending)
-        // 3. timestamp (Ascending)
-        // Firebase Console will usually provide a link to create this index if it's missing.
+       
         const q = query(
           scoresCollection, 
           orderBy("score", "desc"), 

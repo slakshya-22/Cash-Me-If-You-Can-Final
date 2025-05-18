@@ -2,13 +2,11 @@
 import {genkit} from 'genkit';
 import {googleAI} from '@genkit-ai/googleai';
 
-// Explicitly try to load the API key from environment variables.
-// The googleAI plugin itself will also look for GEMINI_API_KEY by default if apiKey is not provided or is undefined.
+
 const geminiApiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY;
 
 if (!geminiApiKey && process.env.NODE_ENV === 'development') {
-  // This warning will appear in your local development console when running `npm run genkit:dev` or similar,
-  // if the key isn't set in your .env file (which is loaded by src/ai/dev.ts).
+  
   console.warn(
     `\n[Genkit Setup Warning]
     GEMINI_API_KEY (or GOOGLE_API_KEY) is not set in your environment.
@@ -23,9 +21,9 @@ if (!geminiApiKey && process.env.NODE_ENV === 'development') {
 export const ai = genkit({
   plugins: [
     googleAI({
-      apiKey: geminiApiKey, // Pass the key if found. If undefined, the plugin will use its default lookup.
+      apiKey: geminiApiKey, 
     }),
   ],
-  model: 'googleai/gemini-2.0-flash', // Your existing default model setting
+  model: 'googleai/gemini-2.0-flash', 
 });
 

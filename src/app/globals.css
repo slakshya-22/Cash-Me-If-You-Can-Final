@@ -5,29 +5,24 @@
 
 @layer base {
   :root {
-    /* KBC Inspired Dark Theme - Vivid Purple, Electric Indigo, Soft Lavender (for text/highlights) */
-    /* Primary: Electric Indigo (#6F00FF) -> HSL(267, 100%, 50%) */
-    /* Secondary: Vivid Purple (#9400D3) -> HSL(282, 100%, 41%) */
-    /* Accent: Gold/Yellow for contrast */
-    /* Background: Deep Dark Purple/Indigo */
-    /* Foreground (Text): Soft Lavender inspired (very light, high contrast) */
-
-    --background: 270 50% 8%; /* Deep Dark Purple/Indigo */
-    --foreground: 240 40% 95%; /* Very Light Lavender/Off-White for text */
     
-    --card: 270 50% 12%; /* Slightly Lighter Dark Purple/Indigo for cards */
+
+    --background: 270 50% 8%; 
+    --foreground: 240 40% 95%; 
+    
+    --card: 270 50% 12%; 
     --card-foreground: 240 40% 95%;
     
-    --popover: 270 50% 10%; /* Darker for popovers */
+    --popover: 270 50% 10%; 
     --popover-foreground: 240 40% 95%;
     
-    --primary: 267 100% 60%; /* Electric Indigo - Main interactive elements, slightly lighter for better vibrancy */
-    --primary-foreground: 240 60% 97%; /* Light text on Electric Indigo */
+    --primary: 267 100% 60%; 
+    --primary-foreground: 240 60% 97%; 
     
-    --secondary: 282 100% 50%; /* Vivid Purple - Other accents, buttons, slightly lighter */
-    --secondary-foreground: 240 60% 97%; /* Light text on Vivid Purple */
+    --secondary: 282 100% 50%; 
+    --secondary-foreground: 240 60% 97%; 
     
-    --muted: 270 30% 25%; /* Muted Purple for less emphasis */
+    --muted: 270 30% 25%; 
     --muted-foreground: 240 30% 70%; /* Lighter muted text */
     
     --accent: 45 100% 55%; /* Gold/Bright Yellow for highlights, rings, lifelines */
@@ -45,14 +40,14 @@
     
     --radius: 0.75rem; /* Slightly larger radius for a modern feel */
 
-    /* Chart colors can remain generic or be themed if charts are used extensively */
+    
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
     
-    /* Sidebar specific (if used, can adopt main theme) */
+   
     --sidebar-background: 270 45% 6%; 
     --sidebar-foreground: 240 35% 90%;
     --sidebar-primary: var(--primary);
@@ -64,7 +59,7 @@
   }
 
   .dark {
-    /* Ensure dark theme variables are the same as root for consistency */
+    
     --background: 270 50% 8%;
     --foreground: 240 40% 95%;
     --card: 270 50% 12%;
@@ -110,7 +105,7 @@
   }
   body {
     @apply bg-background text-foreground antialiased;
-    /* Consider a subtle gradient for depth if desired */
+    
     /* background-image: radial-gradient(circle at top center, hsl(var(--background)) 0%, hsl(var(--background-end, var(--background))) 100%); */
   }
 }
@@ -135,7 +130,7 @@
   .animation-delay-450ms {
     animation-delay: 0.45s;
   }
-  .animation-delay-\[0\.6s\] { /* Added for 5th dot in loader */
+  .animation-delay-\[0\.6s\] { 
     animation-delay: 0.6s;
   }
 }

@@ -36,7 +36,7 @@ export function PhoneAFriendDialog({ isOpen, onOpenChange, currentQuestion }: Ph
       setError(null);
       setIsLoading(false);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+
   }, [isOpen, currentQuestion]);
 
   const fetchAdvice = async () => {

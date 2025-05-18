@@ -2,7 +2,7 @@
 "use client";
 
 import { Progress } from "@/components/ui/progress";
-import { Clock, Zap } from "lucide-react"; // Zap for low time emphasis
+import { Clock, Zap } from "lucide-react"; 
 
 interface TimerDisplayProps {
   timeLeft: number;
@@ -11,7 +11,7 @@ interface TimerDisplayProps {
 
 export function TimerDisplay({ timeLeft, initialTime }: TimerDisplayProps) {
   const progressPercentage = (timeLeft / initialTime) * 100;
-  const isLowTime = timeLeft <= 10 && timeLeft > 0; // KBC typically has 30 or 45 sec timer, 10s is low
+  const isLowTime = timeLeft <= 10 && timeLeft > 0; 
 
   return (
     <div className="w-full p-4 sm:p-5 bg-card rounded-lg shadow-xl border border-primary/20 flex items-center space-x-3 sm:space-x-4">

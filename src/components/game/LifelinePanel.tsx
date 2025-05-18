@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, UsersRound, Scissors } from "lucide-react";
 import { PhoneAFriendDialog } from "./PhoneAFriendDialog";
-import { AudiencePollDialog } from "./AudiencePollDialog"; // New Dialog
+import { AudiencePollDialog } from "./AudiencePollDialog"; 
 import type { Question, AudiencePollResults } from "@/lib/types";
 
 interface LifelinePanelProps {
@@ -14,8 +14,8 @@ interface LifelinePanelProps {
   isFiftyFiftyUsed: boolean;
   onFiftyFiftyUsed: () => void;
   isAudiencePollUsed: boolean;
-  onAudiencePollUsed: () => void; // This will trigger state change and dialog opening
-  audiencePollResults: AudiencePollResults | null; // To pass to dialog
+  onAudiencePollUsed: () => void; // trigger state change and dialog opening
+  audiencePollResults: AudiencePollResults | null; 
   disabled: boolean;
 }
 
@@ -36,20 +36,20 @@ export function LifelinePanel({
   const handlePhoneAFriendClick = () => {
     if (!isPhoneAFriendUsed) {
       setIsPhoneAFriendDialogOpen(true);
-      onPhoneAFriendUsed(); // Mark as used in game state
+      onPhoneAFriendUsed(); 
     }
   };
 
   const handleFiftyFiftyClick = () => {
     if (!isFiftyFiftyUsed) {
-      onFiftyFiftyUsed(); // Mark as used and apply logic in game state
+      onFiftyFiftyUsed(); 
     }
   };
 
   const handleAudiencePollClick = () => {
     if (!isAudiencePollUsed) {
-      onAudiencePollUsed(); // Mark as used and generate results in game state
-      setIsAudiencePollDialogOpen(true); // Open the dialog
+      onAudiencePollUsed(); 
+      setIsAudiencePollDialogOpen(true); 
     }
   };
 

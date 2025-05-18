@@ -68,20 +68,20 @@ export function GameArea({ gameMode, gameCategory }: GameAreaProps) {
   useEffect(() => {
     if (gameStatus === "playing" && currentQuestion && !isAnswerRevealed) { 
       if (!isRunning) { 
-        resetTimer(); // Ensure timer is reset for the new question
+        resetTimer(); 
         startTimer();
       }
     } else if ((gameStatus !== "playing" || isAnswerRevealed) && isRunning) {
       stopTimer();
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+ 
   }, [gameStatus, currentQuestion, isAnswerRevealed]); 
 
   useEffect(() => {
     if (gameStatus === "idle") {
       startGame(gameMode, gameCategory);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+ 
   }, [gameStatus, startGame, gameMode, gameCategory]);
 
   const handleConfirmQuit = useCallback(() => {

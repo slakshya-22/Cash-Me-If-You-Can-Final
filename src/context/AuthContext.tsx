@@ -25,8 +25,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const { toast } = useToast();
   const router = useRouter();
   // searchParams and handleRedirect removed as they are not used by AuthProvider directly
-  // and were causing issues with 404 page builds.
-  // Redirect logic after sign-in/sign-up is handled within those specific pages.
+  // bcz it was causing 404 error
+  
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {

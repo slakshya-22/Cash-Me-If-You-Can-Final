@@ -1,11 +1,8 @@
 'use server';
 /**
  * @fileOverview Implements the Phone-A-Friend lifeline using Genkit.
- *
- * - phoneAFriend - A function that provides a likely correct answer to a trivia question.
- * - PhoneAFriendInput - The input type for the phoneAFriend function.
- * - PhoneAFriendOutput - The return type for the phoneAFriend function.
  */
+
 
 import {ai} from '@/ai/genkit';
 import {z} from 'genkit';

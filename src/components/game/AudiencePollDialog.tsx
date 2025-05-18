@@ -28,7 +28,6 @@ export function AudiencePollDialog({
 }: AudiencePollDialogProps) {
   if (!currentQuestion || !audiencePollResults) return null;
 
-  // Find the answer with the highest percentage for highlighting, if desired
   // const highestVote = Math.max(...Object.values(audiencePollResults));
 
   return (
@@ -41,17 +40,23 @@ export function AudiencePollDialog({
           </DialogTitle>
           <DialogDescription className="text-muted-foreground">
             The audience has voted on:
-            <strong className="block mt-1 text-foreground">{currentQuestion?.text}</strong>
+            <strong className="block mt-1 text-foreground">
+              {currentQuestion?.text}
+            </strong>
           </DialogDescription>
         </DialogHeader>
-        
+
         <div className="my-4 space-y-3">
           {Object.entries(audiencePollResults).map(([option, percentage]) => (
             <Card key={option} className="bg-background/50 border-border">
               <CardContent className="p-3">
                 <div className="flex items-center justify-between mb-1">
-                  <span className="text-sm font-medium text-foreground">{option}</span>
-                  <span className="text-sm font-bold text-primary">{percentage}%</span>
+                  <span className="text-sm font-medium text-foreground">
+                    {option}
+                  </span>
+                  <span className="text-sm font-bold text-primary">
+                    {percentage}%
+                  </span>
                 </div>
                 <div className="w-full bg-muted rounded-full h-3.5">
                   <div
@@ -66,8 +71,11 @@ export function AudiencePollDialog({
         </div>
 
         <DialogFooter>
-          <Button onClick={() => onOpenChange(false)} className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            <BarChart3 className="mr-2 h-4 w-4"/>
+          <Button
+            onClick={() => onOpenChange(false)}
+            className="bg-primary hover:bg-primary/90 text-primary-foreground"
+          >
+            <BarChart3 className="mr-2 h-4 w-4" />
             Got it!
           </Button>
         </DialogFooter>

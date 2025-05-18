@@ -28,9 +28,9 @@ export function AnswerOption({
       if (isCorrect) return { variant: "success" as const, extraClass: "shadow-lg shadow-success/50 ring-2 ring-success-foreground animate-pulse" };
       if (isSelected && !isCorrect) return { variant: "destructive" as const, extraClass: "shadow-lg shadow-destructive/50" };
     }
-    // When selected but not yet revealed (locked in)
+    
     if (isSelected) return { variant: "default" as const, extraClass: "ring-2 ring-primary-foreground shadow-md shadow-primary/40 scale-105" };
-    // Default state, not selected, not revealed
+    // Default state
     return { variant: "outline" as const, extraClass: "border-primary/50 hover:bg-primary/10 hover:text-primary-foreground hover:shadow-primary/20" };
   };
 
@@ -46,7 +46,7 @@ export function AnswerOption({
         extraClass,
         {
           "opacity-50 brightness-75 cursor-not-allowed": disabled && !isSelected,
-          "opacity-70 brightness-90": isRevealed && !isCorrect && !isSelected, // Make unselected incorrect options less prominent after reveal
+          "opacity-70 brightness-90": isRevealed && !isCorrect && !isSelected, 
         }
       )}
       variant={variant}
